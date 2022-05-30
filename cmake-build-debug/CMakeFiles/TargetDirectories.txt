@@ -1,0 +1,3 @@
+/home/vsluis/CLionProjects/Trabalho-AEDll/cmake-build-debug/CMakeFiles/Trabalho_AEDll.dir
+/home/vsluis/CLionProjects/Trabalho-AEDll/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vsluis/CLionProjects/Trabalho-AEDll/cmake-build-debug/CMakeFiles/rebuild_cache.dir
