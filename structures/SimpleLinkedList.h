@@ -13,12 +13,26 @@ struct node {
     struct node *next;
 };
 
-void insertBegin(struct node**, int key);
+/**
+ * Insert at the beginning of the list
+ * @param key
+ */
+void insertSorted(struct node** list, int key);
+/**
+ * Free all the nodes of the list
+ */
 void destroy(struct node**);
+/**
+ * Print the list
+ */
 void print(struct node*);
 //void remove(int key);
-//struct node* peek(int key);
-//int find(int key);
+/**
+ * Find the first node if key match
+ * @param key
+ * @return A pointer to the node if the node exists, NULL pointer otherwise
+ */
+struct node* peek(int key);
 
 
 #endif //TRABALHO_AEDLL_SIMPLELINKEDLIST_H

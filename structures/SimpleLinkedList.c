@@ -3,19 +3,32 @@
 //
 #include "SimpleLinkedList.h"
 
-void insertBegin(struct node** list, int key) {
-    struct node* newNode = malloc(sizeof(struct node));
+void insertSorted(struct node ** list, int key) {
+    struct node *newNode = malloc(sizeof(struct node));
+    if (newNode == NULL) {
+        printf("Falha ao alocar memoria!\n");
+        return;
+    }
+    struct node *aux;
     newNode->key = key;
+    /*If there is no element on the list*/
     if (*list == NULL) {
         newNode->next = NULL;
         *list = newNode;
-    } else {
+    } else if (newNode->key < (*list)->key) { /*If the new element is less than the first element of the list*/
         newNode->next = *list;
         *list = newNode;
+    } else { /*Otherwise, search for the correct place of the new element*/
+        aux = *list;
+        while (aux->next && newNode->key > aux->next->key) {
+            aux = aux->next;
+        }
+        newNode->next = aux->next;
+        aux->next = newNode;
     }
 }
 
-void print(struct node* list) {
+void print(struct node *list) {
     while (list != NULL) {
         printf("%d -> ", list->key);
         list = list->next;
@@ -23,11 +36,15 @@ void print(struct node* list) {
     printf("NIL\n");
 }
 
-void destroy(struct node** list) {
-    struct node* aux = *list;
+void destroy(struct node **list) {
+    struct node *aux = *list;
     while (aux != NULL) {
         *list = aux->next;
         free(aux);
         aux = *list;
     }
+}
+
+struct node *peek(int key) {
+
 }

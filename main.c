@@ -4,10 +4,10 @@
 int main() {
     struct node* list = NULL;
 
-    insertBegin(&list, 1);
-    insertBegin(&list, 2);
-    insertBegin(&list, 2);
-    insertBegin(&list, 2);
+    insertSorted(&list, 5);
+    insertSorted(&list, 1);
+    insertSorted(&list, 4);
+    insertSorted(&list, 6);
     print(list);
     destroy(&list);
 
