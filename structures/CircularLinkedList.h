@@ -6,17 +6,13 @@
 #define TRABALHO_AEDLL_CIRCULARLINKEDLIST_H
 #include <stdlib.h>
 #include <stdio.h>
-
-struct node {
-    int key;
-    struct node *next;
-};
+#include "NodeType.h"
 
 /**
  * Insert at the beginning of the list
  * @param key
  */
-void insertSorted(struct node** list, int key);
+void insertCircularSorted(struct node** list, int key);
 /**
  * Free all the nodes of the list
  */

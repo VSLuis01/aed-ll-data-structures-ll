@@ -3,7 +3,7 @@
 //
 #include "SimpleLinkedList.h"
 
-void insertSorted(struct node ** list, int key) {
+void insertLinkedSorted(struct node ** list, int key) {
     struct node *newNode = malloc(sizeof(struct node));
     if (newNode == NULL) {
         printf("Falha ao alocar memoria!\n");
