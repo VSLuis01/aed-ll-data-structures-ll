@@ -45,11 +45,32 @@ void destroy(struct node **list) {
     }
 }
 
-struct node *peek(struct node* list, int key) {
-    while (list != NULL) {
-        if(list->key == key) {
-            return list;
-        }
-        list = list->next;
+void removeNode(struct node** list, int key) {
+    struct node* prev;
+    struct node* cur = *list;
+
+    /*remover do primeiro elemento*/
+    if (cur->key == key) {
+        *list = (*list)->next;
+        free(cur);
+        return;
+    }
+
+    search(*list, key, &cur, &prev);
+    if (cur != NULL) {
+        prev->next = cur->next;
+        free(cur);
     }
 }
+
+void search(struct node* list, int key, struct node** point, struct node** prev) {
+    *point = list;
+    while (*point != NULL) {
+        if((*point)->key == key) {
+            break;
+        }
+        *prev = *point;
+        *point = (*point)->next;
+    }
+}
+

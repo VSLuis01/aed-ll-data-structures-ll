@@ -26,13 +26,20 @@ void destroy(struct node**);
  * Print the list
  */
 void print(struct node*);
-//void remove(int key);
+
 /**
- * Find the first node if key match
+ * Remove a node if key match
  * @param key
- * @return A reference to the node if the node exists, NULL pointer otherwise
  */
-struct node* peek(struct node*, int key);
+void removeNode(struct node**, int key);
+
+/**
+ * Find the first node if key matchs
+ * @param key
+ * @param point reference to the searched node it self
+ * @param prev reference to the previous node of the searched node
+ */
+void search(struct node*, int key, struct node** point, struct node** prev);
 
 
 #endif //TRABALHO_AEDLL_SIMPLELINKEDLIST_H
