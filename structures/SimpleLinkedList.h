@@ -4,15 +4,21 @@
 
 #ifndef TRABALHO_AEDLL_SIMPLELINKEDLIST_H
 #define TRABALHO_AEDLL_SIMPLELINKEDLIST_H
-struct sl_list {
+
+#include <stdlib.h>
+#include <stdio.h>
+
+struct node {
     int key;
-    struct sl_list *next;
+    struct node *next;
 };
 
-void insertBegin(struct sl_list**);
-void remove(int key);
-struct sl_list* peek(int key);
-int find(int key);
+void insertBegin(struct node**, int key);
+void destroy(struct node**);
+void print(struct node*);
+//void remove(int key);
+//struct node* peek(int key);
+//int find(int key);
 
 
 #endif //TRABALHO_AEDLL_SIMPLELINKEDLIST_H
