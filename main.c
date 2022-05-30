@@ -8,6 +8,7 @@ int main() {
     insertCircularSorted(&list, 5);
     insertCircularSorted(&list, 1);
     insertCircularSorted(&list, 6);
+    circularDestroy(&list);
 
     /*
     insertSorted(&list, 5);

@@ -16,7 +16,7 @@ void insertCircularSorted(struct node** list, int key);
 /**
  * Free all the nodes of the list
  */
-void destroy(struct node**);
+void circularDestroy(struct node**);
 /**
  * Print the list
  */

@@ -3,7 +3,7 @@
 //
 #include "CircularLinkedList.h"
 
-void insertCircularSorted(struct node ** list, int key) {
+void insertCircularSorted(struct node **list, int key) {
     struct node *newNode = malloc(sizeof(struct node));
     if (newNode == NULL) {
         printf("Falha ao alocar memoria!\n");
@@ -31,4 +31,17 @@ void insertCircularSorted(struct node ** list, int key) {
         newNode->next = aux->next;
         aux->next = newNode;
     }
+}
+
+void circularDestroy(struct node **list) {
+    struct node *aux = (*list)->next;
+    struct node* temp;
+    while (aux != *list) {
+        temp = aux->next;
+        free(aux);
+        aux = temp;
+    }
+    free(*list);
+    *list = NULL;
+
 }
