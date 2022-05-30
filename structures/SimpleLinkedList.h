@@ -30,9 +30,9 @@ void print(struct node*);
 /**
  * Find the first node if key match
  * @param key
- * @return A pointer to the node if the node exists, NULL pointer otherwise
+ * @return A reference to the node if the node exists, NULL pointer otherwise
  */
-struct node* peek(int key);
+struct node* peek(struct node*, int key);
 
 
 #endif //TRABALHO_AEDLL_SIMPLELINKEDLIST_H

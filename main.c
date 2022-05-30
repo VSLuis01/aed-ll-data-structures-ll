@@ -8,6 +8,7 @@ int main() {
     insertSorted(&list, 1);
     insertSorted(&list, 4);
     insertSorted(&list, 6);
+    struct node* i = peek(list, 4);
     print(list);
     destroy(&list);
 

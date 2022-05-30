@@ -45,6 +45,11 @@ void destroy(struct node **list) {
     }
 }
 
-struct node *peek(int key) {
-
+struct node *peek(struct node* list, int key) {
+    while (list != NULL) {
+        if(list->key == key) {
+            return list;
+        }
+        list = list->next;
+    }
 }
