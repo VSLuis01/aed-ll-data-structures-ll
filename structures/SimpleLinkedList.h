@@ -27,7 +27,7 @@ void print(struct node*);
  * Remove a node if key match
  * @param key
  */
-void removeNode(struct node**, int key);
+void removeLinkedNode(struct node**, int key);
 
 /**
  * Find the first node if key matchs
@@ -35,7 +35,7 @@ void removeNode(struct node**, int key);
  * @param point reference to the searched node it self
  * @param prev reference to the previous node of the searched node
  */
-void search(struct node*, int key, struct node** point, struct node** prev);
+void linkedSearch(struct node*, int key, struct node** point, struct node** prev);
 
 
 #endif //TRABALHO_AEDLL_SIMPLELINKEDLIST_H

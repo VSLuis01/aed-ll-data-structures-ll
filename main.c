@@ -5,22 +5,32 @@
 int main() {
     struct node* list = NULL;
 
+
     insertCircularSorted(&list, 5);
+    insertCircularSorted(&list, 2);
     insertCircularSorted(&list, 1);
     insertCircularSorted(&list, 6);
+    insertCircularSorted(&list, 6);
+
+    removeCircularNode(&list, 5);
+//    removeCircularNode(&list, 6);
     circularDestroy(&list);
+//    printCircular(list);
 
     /*
-    insertSorted(&list, 5);
-    insertSorted(&list, 1);
-    insertSorted(&list, 4);
-    insertCircularSorted(&list, 6);
+    insertLinkedSorted(&list, 5);
+    insertLinkedSorted(&list, 1);
+    insertLinkedSorted(&list, 4);
+    insertLinkedSorted(&list, 4);
+    insertLinkedSorted(&list, 6);
+
     //struct node* i = search(list, 4);
     print(list);
 
-    removeNode(&list, 6);
+    removeLinkedNode(&list, 6);
     destroy(&list);
      */
+
 
     //free(list);
     return 0;
